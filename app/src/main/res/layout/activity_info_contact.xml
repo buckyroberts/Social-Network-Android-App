@@ -1,0 +1,194 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.thenewboston.InfoContactActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+
+
+        <ScrollView
+            android:layout_below="@+id/app_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!-- Main content -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ccc"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <!-- Email -->
+                <RelativeLayout
+                    android:id="@+id/emailLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/emailLabel"
+                        style="@style/label_small"
+                        android:text="Email:" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        style="@style/input_disabled"
+                        android:layout_below="@+id/emailLabel"
+                        android:editable="false"
+                        android:text="sample@email.com" />
+
+                    <Spinner
+                        android:id="@+id/emailSpinner"
+                        style="@style/spinner_normal"
+                        android:layout_below="@+id/email"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/post_visibilities" />
+                </RelativeLayout>
+
+
+                <!-- Cell phone -->
+                <RelativeLayout
+                    android:id="@+id/cellPhoneLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cellPhoneLabel"
+                        style="@style/label_small"
+                        android:text="Cell phone:" />
+
+                    <EditText
+                        android:id="@+id/cellPhone"
+                        style="@style/input_short"
+                        android:layout_below="@+id/cellPhoneLabel"
+                        android:layout_width="fill_parent"
+                        android:layout_toLeftOf="@+id/cellPhoneToggle"
+                        android:layout_toStartOf="@+id/cellPhoneToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/cellPhoneToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/cellPhone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <!-- Home phone -->
+                <RelativeLayout
+                    android:id="@+id/homePhoneLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/homePhoneLabel"
+                        style="@style/label_small"
+                        android:text="Home phone:" />
+
+                    <EditText
+                        android:id="@+id/homePhone"
+                        style="@style/input_short"
+                        android:layout_below="@+id/homePhoneLabel"
+                        android:layout_toLeftOf="@+id/homePhoneToggle"
+                        android:layout_toStartOf="@+id/homePhoneToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/homePhoneToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/homePhone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <!-- Work phone -->
+                <RelativeLayout
+                    android:id="@+id/workPhoneLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/workPhoneLabel"
+                        style="@style/label_small"
+                        android:text="Work phone:" />
+
+                    <EditText
+                        android:id="@+id/workPhone"
+                        style="@style/input_short"
+                        android:layout_below="@+id/workPhoneLabel"
+                        android:layout_toLeftOf="@+id/workPhoneToggle"
+                        android:layout_toStartOf="@+id/workPhoneToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/workPhoneToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/workPhone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/eductaion_recycler_view"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Submit button -->
+                <RelativeLayout
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_submit"
+                        style="@style/button_form"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Submit" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/progress_overlay"
+            android:background="#80000000"
+            android:clickable="false"
+            android:onClick="overlayClick"
+            android:layout_below="@+id/app_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="false" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/left_drawer"
+        android:name="com.thenewboston.navigation.NavigationDrawer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

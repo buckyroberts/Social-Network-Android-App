@@ -1,0 +1,153 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.thenewboston.CreatePostActivity"
+            android:background="#FBFBFB">
+
+            <include
+                android:id="@+id/app_bar"
+                layout="@layout/app_bar" />
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/app_bar">
+
+                <!-- Main content -->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_post_form_layout"
+                    android:padding="16dp">
+
+                    <EditText
+                        style="@style/input_area"
+                        android:id="@+id/article_text"
+                        android:hint="Create a new post..."
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        style="@style/button_icon"
+                        android:text="Add Photo"
+                        android:id="@+id/addPhotoButton"
+                        android:onClick="selectPhoto"
+                        android:drawableLeft="@drawable/btn_camera_light"
+                        android:layout_alignTop="@+id/post_visibility"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="18dp"
+                        android:drawablePadding="6dp"
+                        android:layout_height="40dp"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        style="@style/spinner_normal"
+                        android:id="@+id/post_visibility"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/post_visibilities"
+                        android:focusableInTouchMode="false"
+                        android:layout_below="@+id/article_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toRightOf="@+id/addPhotoButton"
+                        android:layout_toEndOf="@+id/addPhotoButton"
+                        android:layout_marginLeft="16dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Image previews and submit button -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/post_visibility"
+                        android:orientation="vertical">
+
+                        <!-- Single image -->
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/photo_preview_layout"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/previewPhoto"
+                                android:layout_alignParentStart="false"
+                                android:adjustViewBounds="true"
+                                android:layout_gravity="center"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/little_bucky"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_alignRight="@+id/previewPhoto"
+                                android:layout_alignEnd="@+id/previewPhoto"
+                                android:layout_alignBottom="@+id/previewPhoto"
+                                android:onClick="removePhoto"
+                                android:text="Remove"
+                                android:id="@+id/removePhoto"
+                                android:background="#2C3E50"
+                                android:alpha="0.6"
+                                android:paddingRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/buttonPost"
+                            style="@style/button_form"
+                            android:text="Post"
+                            android:onClick="createNewPost"
+                            android:layout_marginTop="0dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/progress_overlay"
+                android:background="#80000000"
+                android:clickable="false"
+                android:onClick="overlayClick"
+                android:visibility="gone"
+                android:layout_below="@+id/app_bar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="false" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <fragment
+        android:id="@+id/left_drawer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:name="com.thenewboston.navigation.NavigationDrawer"
+        tools:layout="@layout/navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

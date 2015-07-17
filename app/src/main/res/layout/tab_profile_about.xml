@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:background="#DDD">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FDFDFD"
+                android:nestedScrollingEnabled="true"
+                android:id="@+id/profile_basic_info_layout"
+                android:padding="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/basicInfoBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Basic Information"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#555"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/editBasicInfo"
+                    android:layout_alignTop="@+id/basicInfoBoxTitle"
+                    android:layout_alignRight="@+id/profile_basic_info_table"
+                    android:layout_alignEnd="@+id/profile_basic_info_table"
+                    android:src="@drawable/ic_pencil"
+                    android:alpha="0.6" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/basicInfoBoxTitle"
+                    android:layout_alignStart="@+id/basicInfoBoxTitle"
+                    android:layout_below="@+id/basicInfoBoxTitle"
+                    android:id="@+id/profile_basic_info_table">
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#FDFDFD"
+                android:nestedScrollingEnabled="true"
+                android:padding="8dp"
+                android:id="@+id/profile_education_layout">
+
+                <TextView
+                    android:id="@+id/educationBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Education"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#555"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/editEducation"
+                    android:layout_alignTop="@+id/educationBoxTitle"
+                    android:layout_alignRight="@+id/profile_education_table"
+                    android:layout_alignEnd="@+id/profile_education_table"
+                    android:src="@drawable/ic_pencil"
+                    android:alpha="0.6" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/educationBoxTitle"
+                    android:layout_alignStart="@+id/educationBoxTitle"
+                    android:layout_below="@+id/educationBoxTitle"
+                    android:id="@+id/profile_education_table">
+                </TableLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#FDFDFD"
+                android:nestedScrollingEnabled="true"
+                android:padding="8dp"
+                android:id="@+id/profile_employment_layout">
+
+                <TextView
+                    android:id="@+id/employmentBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Employment"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#555"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/editEmployment"
+                    android:layout_alignTop="@+id/employmentBoxTitle"
+                    android:layout_alignRight="@+id/profile_employment_table"
+                    android:layout_alignEnd="@+id/profile_employment_table"
+                    android:src="@drawable/ic_pencil"
+                    android:alpha="0.6" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/employmentBoxTitle"
+                    android:layout_alignStart="@+id/employmentBoxTitle"
+                    android:layout_below="@+id/employmentBoxTitle"
+                    android:id="@+id/profile_employment_table">
+                </TableLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#FDFDFD"
+                android:nestedScrollingEnabled="true"
+                android:padding="8dp"
+                android:id="@+id/profile_links_layout">
+
+                <TextView
+                    android:id="@+id/linksBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Links"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#555"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/editLinks"
+                    android:layout_alignTop="@+id/linksBoxTitle"
+                    android:layout_alignRight="@+id/profile_links_table"
+                    android:layout_alignEnd="@+id/profile_links_table"
+                    android:src="@drawable/ic_pencil"
+                    android:alpha="0.6" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linksBoxTitle"
+                    android:layout_alignStart="@+id/linksBoxTitle"
+                    android:layout_below="@+id/linksBoxTitle"
+                    android:id="@+id/profile_links_table">
+                </TableLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#FDFDFD"
+                android:nestedScrollingEnabled="true"
+                android:padding="8dp"
+                android:id="@+id/profile_contact_layout">
+
+                <TextView
+                    android:id="@+id/contactBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Contact"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#555"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/editContact"
+                    android:layout_alignTop="@+id/contactBoxTitle"
+                    android:layout_alignRight="@+id/profile_contact_table"
+                    android:layout_alignEnd="@+id/profile_contact_table"
+                    android:src="@drawable/ic_pencil"
+                    android:alpha="0.6" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/contactBoxTitle"
+                    android:layout_alignStart="@+id/contactBoxTitle"
+                    android:layout_below="@+id/contactBoxTitle"
+                    android:id="@+id/profile_contact_table">
+                </TableLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>

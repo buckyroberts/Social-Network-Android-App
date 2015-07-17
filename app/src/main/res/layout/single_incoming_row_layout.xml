@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/simpleRowLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:padding="8dp"
+    android:layout_marginBottom="1px">
+
+    <ImageView
+        android:id="@+id/item_thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/default_profile_image" />
+
+    <Button
+        android:id="@+id/buttonDecline"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:text="Decline"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#C0392B"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <Button
+        android:id="@+id/buttonAccept"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Accept"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/buttonDecline"
+        android:layout_toStartOf="@+id/buttonDecline"
+        android:background="#27AE60"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Bucky Roberts"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:textColor="#006699"
+        android:layout_toLeftOf="@+id/buttonAccept"
+        android:layout_toStartOf="@+id/buttonAccept" />
+
+    <TextView
+        android:id="@+id/itemDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pittsburgh, PA"
+        android:layout_below="@+id/item_title"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:layout_toEndOf="@+id/item_thumbnail"
+        android:layout_toLeftOf="@+id/buttonAccept"
+        android:layout_toStartOf="@+id/buttonAccept"
+        android:textColor="#777"
+        android:textSize="12sp" />
+
+</RelativeLayout>

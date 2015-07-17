@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_info_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/profile_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutThumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/profileThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_profile_image" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/profileEdit"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_pencil_edit" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/layoutThumbnail"
+            android:layout_toRightOf="@+id/layoutThumbnail"
+            android:text="Bucky Roberts"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#555"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profilePoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profileName"
+            android:layout_alignStart="@+id/profileName"
+            android:layout_below="@+id/profileName"
+            android:paddingTop="4dp"
+            android:text="Points: 2,713"
+            android:textColor="#999"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/buttonSendMessage"
+            style="@style/button_icon"
+            android:layout_alignLeft="@+id/profilePoints"
+            android:layout_alignStart="@+id/profilePoints"
+            android:layout_below="@+id/profilePoints"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_button_message_light"
+            android:text="Message" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonCreatePost"
+        style="@style/button_normal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_top_layout"
+        android:background="#2980B9"
+        android:drawableLeft="@drawable/ic_pencil_light"
+        android:text="Write Bucky a Post"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp" />
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/singleMessageLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1px"
+    android:background="#FFF"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/item_thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/aubree" />
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/itemDate"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:layout_toStartOf="@+id/itemDate"
+        android:text="Aubree Keegan"
+        android:textColor="#333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_title"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:paddingTop="1dp"
+        android:text="Subject of Message"
+        android:textColor="#777"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/itemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="May 31, 2015"
+        android:textColor="#BBB"
+        android:textSize="11sp" />
+
+</RelativeLayout>

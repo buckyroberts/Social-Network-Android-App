@@ -1,0 +1,126 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Main content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F6F6"
+        tools:context="com.thenewboston.LoginActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:clickable="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/firstNameLabel"
+                    style="@style/label_small"
+                    android:text="@string/label_first_name" />
+
+                <EditText
+                    android:id="@+id/firstName"
+                    style="@style/input_normal"
+                    android:autoText="false" />
+
+                <TextView
+                    android:id="@+id/lastNameLabel"
+                    style="@style/label_small"
+                    android:text="@string/label_last_name" />
+
+                <EditText
+                    android:id="@+id/lastName"
+                    style="@style/input_normal"
+                    android:autoText="false"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/label_email"
+                    style="@style/label_small"
+                    android:text="@string/label_email" />
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/input_normal"
+                    android:autoText="false"
+                    android:inputType="textEmailAddress" />
+
+                <TextView
+                    android:id="@+id/label_password"
+                    style="@style/label_small"
+                    android:text="@string/label_password" />
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/input_normal"
+                    android:autoText="false"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/label_small"
+                    android:text="@string/label_confirm_password" />
+
+                <EditText
+                    android:id="@+id/password2"
+                    style="@style/input_normal"
+                    android:autoText="false"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/button_signin"
+                    style="@style/button_form"
+                    android:clickable="true"
+                    android:onClick="doRegister"
+                    android:text="@string/register" />
+
+                <Button
+                    android:id="@+id/button_signup"
+                    style="@style/button_form"
+                    android:background="#16A085"
+                    android:onClick="gotoLoginActivity"
+                    android:text="@string/have_an_account_signin_here" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progress_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#80000000"
+            android:clickable="false"
+            android:onClick="overlayClick"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="false" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

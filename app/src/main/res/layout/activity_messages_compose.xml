@@ -1,0 +1,127 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F6F6"
+        android:orientation="vertical"
+        tools:context="com.thenewboston.MessagesComposeActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <!-- Top area -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_below="@+id/app_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/label_small"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:layout_row="0"
+                android:text="To:"
+                android:paddingBottom="0dp" />
+
+            <ImageView
+                android:id="@+id/imageTo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_column="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_row="0" />
+
+            <TextView
+                android:id="@+id/textTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical"
+                android:layout_row="0"
+                android:textColor="#006699"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical" />
+
+        </GridLayout>
+
+        <!-- Bottom area -->
+        <RelativeLayout
+            android:layout_below="@+id/gridLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/currentPasswordLabel"
+                style="@style/label_small"
+                android:text="Subject:" />
+
+            <EditText
+                android:id="@+id/textSubject"
+                style="@style/input_normal"
+                android:layout_below="@+id/currentPasswordLabel" />
+
+            <TextView
+                android:id="@+id/newPasswordLabel"
+                android:layout_below="@+id/textSubject"
+                style="@style/label_small"
+                android:text="Message:" />
+
+            <EditText
+                android:id="@+id/textBody"
+                style="@style/input_area"
+                android:layout_below="@+id/newPasswordLabel" />
+
+            <Button
+                android:id="@+id/button_submit"
+                style="@style/button_form"
+                android:layout_marginTop="16dp"
+                android:text="Send"
+                android:layout_below="@+id/textBody"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/progress_overlay"
+            android:background="#80000000"
+            android:clickable="false"
+            android:onClick="overlayClick"
+            android:layout_below="@+id/app_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/left_drawer"
+        android:name="com.thenewboston.navigation.NavigationDrawer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

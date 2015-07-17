@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Form sub-section -->
+    <style name="form_sub_section">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:layout_marginBottom">1px</item>
+        <item name="android:background">#FBFBFB</item>
+    </style>
+
+    <!-- Form label -->
+    <style name="label_small">
+        <item name="android:textColor">#888</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <!-- To label (in between date spinners) -->
+    <style name="label_to">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">to</item>
+        <item name="android:textColor">#aaa</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <!-- Spinner -->
+    <style name="spinner_normal">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">#555</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Short spinner -->
+    <style name="spinner_short" parent="spinner_normal">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <!-- Spinner for years -->
+    <style name="spinner_years" parent="spinner_normal">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!-- Spinner items -->
+    <style name="spinner_item" parent="spinner_normal">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:background">@drawable/spinner_item_bg</item>
+    </style>
+
+    <!-- Inputs -->
+    <style name="input_normal">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:textColorHint">#ddd</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/grey_border</item>
+    </style>
+
+    <!-- Used in single line form sections -->
+    <style name="input_short" parent="input_normal">
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <!-- Disabled inputs -->
+    <style name="input_disabled" parent="input_normal">
+        <item name="android:background">@drawable/grey_border_disabled</item>
+        <item name="android:textColor">#aaa</item>
+    </style>
+
+    <!-- Multi line inputs -->
+    <style name="input_area" parent="input_normal">
+        <item name="android:layout_height">200dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+
+</resources>

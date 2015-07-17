@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thenewboston.NBYoutubeVideoPlayActivity"
+    android:id="@+id/youtube_video_play_layout"
+    android:background="#222">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/youtube_player_view"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="clickPlayer" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:id="@+id/close_button"
+        android:background="#111"
+        android:alpha="0.8"
+        android:textColor="#FFF"
+        android:onClick="goPrevActivity"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" />
+
+</RelativeLayout>

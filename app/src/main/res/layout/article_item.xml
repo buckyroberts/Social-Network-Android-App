@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/articleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="8dp"
+    android:background="#fbfbfb"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+
+    <!-- Article Header -->
+    <RelativeLayout
+        android:id="@+id/article_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/poster_thumbnail"
+            android:layout_width="@dimen/poster_thumbnail_width"
+            android:layout_height="@dimen/poster_thumbnail_height"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/default_profile_image" />
+
+        <TextView
+            android:id="@+id/poster_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/poster_thumbnail"
+            android:layout_toRightOf="@+id/poster_thumbnail"
+            android:text="User Name"
+            android:textColor="#006699"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/posted_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/poster_name"
+            android:layout_alignStart="@+id/poster_name"
+            android:layout_below="@+id/poster_name"
+            android:text="March 6, 2015"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#bbb"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- Article Content -->
+    <RelativeLayout
+        android:id="@+id/article_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/article_item_header">
+
+        <TextView
+            android:id="@+id/article_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Lorem ipsum dolor sit amet, nam putant splendide an, ei modus facete nam. Instructior interpretaris in pri. Modus veniam ea mel, nisl blandit vel in."
+            android:textColor="#777"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/article_text"
+            android:adjustViewBounds="true"
+            android:paddingBottom="6dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/field_short"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/videoLayout"
+            android:layout_below="@+id/article_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="8dp"
+            android:visibility="visible">
+
+            <!-- Video thumbnail -->
+            <ImageView
+                android:id="@+id/article_video_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/mountains_short"
+                android:scaleType="fitXY"
+                android:visibility="visible" />
+
+            <!-- Video overlay -->
+            <ImageView
+                android:id="@+id/article_video_play_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/youtube"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!-- Article Details -->
+    <RelativeLayout
+        android:id="@+id/article_item_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/article_item_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/article_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 likes"
+            android:textColor="#bbb"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/article_likes"
+            android:layout_toRightOf="@+id/article_likes"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=" · "
+            android:textColor="#bbb"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/article_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/sp"
+            android:layout_toRightOf="@+id/sp"
+            android:text="10 comments"
+            android:textColor="#bbb"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <!-- Article Buttons -->
+    <RelativeLayout
+        android:id="@+id/article_item_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/article_item_details"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/buttonLike"
+            style="@style/button_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="#2980B9"
+            android:text="Like" />
+
+        <Button
+            android:id="@+id/buttonComment"
+            style="@style/button_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/buttonLike"
+            android:layout_toRightOf="@+id/buttonLike"
+            android:background="#2980B9"
+            android:text="Comment" />
+
+        <ProgressBar
+            android:id="@+id/likeProgress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/buttonLike"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:indeterminate="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

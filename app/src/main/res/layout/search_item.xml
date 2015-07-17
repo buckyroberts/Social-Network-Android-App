@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_item_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1px"
+    android:background="#F9F9F9"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/item_thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/default_profile_image" />
+
+    <RelativeLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/buttonUnfriend"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="#C0392B"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Follow"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="#27AE60"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Add"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button_container"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:layout_toStartOf="@+id/button_container"
+        android:text="Bucky Roberts"
+        android:textColor="#006699" />
+
+    <TextView
+        android:id="@+id/item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_title"
+        android:layout_toEndOf="@+id/item_thumbnail"
+        android:layout_toLeftOf="@+id/button_container"
+        android:layout_toRightOf="@+id/item_thumbnail"
+        android:layout_toStartOf="@+id/button_container"
+        android:text="Pittsburgh, PA"
+        android:textColor="#777"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/action_progress_bar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_description"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/search_item_layout" android:orientation="vertical"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/search_item_container"
+            android:background="#FFF"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:id="@+id/item_thumbnail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:id="@+id/item_title"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/item_thumbnail"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/button_add"
+                android:layout_toStartOf="@+id/button_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="description"
+                android:id="@+id/item_description"
+                android:layout_below="@+id/item_title"
+                android:layout_toRightOf="@+id/item_thumbnail"
+                android:layout_marginLeft="15dp"
+                android:textColor="#666666"
+                android:layout_toLeftOf="@+id/button_add"
+                android:layout_toStartOf="@+id/button_add" />
+
+            <Button
+                android:text="Add"
+                android:id="@+id/button_add"
+                style="@style/button_icon"
+                android:background="#1ABC9C"
+                android:drawableLeft="@drawable/ic_button_plus_light"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone" />
+
+            <Button
+                android:text="Follow"
+                android:id="@+id/button_follow"
+                style="@style/button_normal"
+                android:background="#2980B9"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/action_progress_bar"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/button_add"
+                android:indeterminate="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="35dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    -->

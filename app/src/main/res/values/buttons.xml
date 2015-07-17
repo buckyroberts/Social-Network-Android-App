@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Submit form button -->
+    <style name="button_form">
+        <item name="android:background">#2980B9</item>
+        <item name="android:textColor">#FBFBFB</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!-- Sub section buttons (such as Remove) -->
+    <style name="button_form_2">
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">#16A085</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+    <!-- Like and Comment button for articles -->
+    <style name="button_normal">
+        <item name="android:textColor">#FBFBFB</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Toggle button (mostly for Public/Private) -->
+    <style name="button_toggle">
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:background">@drawable/toggle_selector</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textOn">Private</item>
+        <item name="android:textOff">Public</item>
+    </style>
+
+    <!-- Use this in single line form sections -->
+    <style name="button_toggle_2">
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:background">@drawable/toggle_selector</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textOn">Private</item>
+        <item name="android:textOff">Public</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <!-- ex: Message button on Profile -->
+    <style name="button_icon">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">#16A085</item>
+        <item name="android:textColor">#FBFBFB</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+</resources>

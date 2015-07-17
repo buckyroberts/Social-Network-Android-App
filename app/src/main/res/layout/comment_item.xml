@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1px"
+    android:background="#FFF"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/commenter_thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/default_profile_image" />
+
+    <TextView
+        android:id="@+id/commenter_name"
+        android:text="Commenter Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/commenter_thumbnail"
+        android:layout_toEndOf="@+id/commenter_thumbnail"
+        android:textColor="#006699"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment Content"
+        android:layout_below="@+id/commenter_name"
+        android:layout_toRightOf="@+id/commenter_thumbnail"
+        android:layout_toEndOf="@+id/commenter_thumbnail"
+        android:textColor="#555"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/comment_image"
+        android:src="@drawable/mountains_short"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_content"
+        android:layout_toRightOf="@+id/commenter_thumbnail"
+        android:layout_toEndOf="@+id/commenter_thumbnail"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/commented_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Commented Date"
+        android:layout_below="@+id/comment_image"
+        android:layout_toRightOf="@+id/commenter_thumbnail"
+        android:layout_toEndOf="@+id/commenter_thumbnail"
+        android:textColor="#BBB"
+        android:textSize="11sp" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <color name="dark_blue">#006699</color>
+    <color name="grey_bg">#ddd</color>
+    <color name="grey_textbox_color">#666666</color>
+    <color name="grey_label_color">#666666</color>
+    <color name="blue_button_bg">#2980b9</color>
+    <color name="blue_button_active_bg">#2471a3</color>
+    <color name="red_button_bg">#c0392b</color>
+    <color name="red_button_active_bg">#a73225</color>
+    <color name="green_button_bg">#16a085</color>
+    <color name="green_button_active_bg">#079277</color>
+    <color name="text_color">#666666</color>
+    <color name="tab_bg">#ddd</color>
+    <color name="tab_bg_selected">#fff</color>
+
+
+    <!-- Toast Style -->
+    <color name="toast_text_color">#3c763d</color>
+    <color name="toast_error_text_color">#a94442</color>
+
+    <!-- Base theme - applied to the entire app in the Manifest -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/grey_bg</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:spinnerItemStyle">@style/spinner_normal</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinner_item</item>
+    </style>
+
+
+
+
+</resources>

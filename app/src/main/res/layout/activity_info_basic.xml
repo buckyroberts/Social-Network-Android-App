@@ -1,0 +1,313 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.thenewboston.InfoBasicActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!-- Main content -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ccc"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <!-- Name -->
+                <RelativeLayout
+                    android:id="@+id/nameLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/firstNameLabel"
+                        style="@style/label_small"
+                        android:text="@string/label_first_name" />
+
+                    <EditText
+                        android:id="@+id/firstName"
+                        style="@style/input_normal"
+                        android:layout_below="@+id/firstNameLabel"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:id="@+id/lastNameLabel"
+                        style="@style/label_small"
+                        android:layout_below="@+id/firstName"
+                        android:text="@string/label_last_name" />
+
+                    <EditText
+                        android:id="@+id/lastName"
+                        style="@style/input_normal"
+                        android:layout_below="@+id/lastNameLabel"
+                        android:inputType="textPersonName" />
+                </RelativeLayout>
+
+
+                <!-- Birthday -->
+                <RelativeLayout
+                    android:id="@+id/birthdayLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/birthdayLabel"
+                        style="@style/label_small"
+                        android:text="Birthday:" />
+
+                    <Spinner
+                        android:id="@+id/monthSpinner"
+                        style="@style/spinner_normal"
+                        android:layout_below="@+id/birthdayLabel"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/months" />
+
+                    <Spinner
+                        android:id="@+id/daySpinner"
+                        style="@style/spinner_normal"
+                        android:layout_below="@+id/monthSpinner"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/days" />
+
+                    <Spinner
+                        android:id="@+id/yearSpinner"
+                        style="@style/spinner_normal"
+                        android:layout_below="@+id/daySpinner"
+                        android:background="@drawable/spinner_bg" />
+
+                    <ToggleButton
+                        android:id="@+id/birthdayToggle"
+                        style="@style/button_toggle"
+                        android:layout_alignEnd="@+id/yearSpinner"
+                        android:layout_alignRight="@+id/yearSpinner"
+                        android:layout_below="@+id/yearSpinner" />
+                </RelativeLayout>
+
+
+                <!-- Gender -->
+                <RelativeLayout
+                    android:id="@+id/genderLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/genderLabel"
+                        style="@style/label_small"
+                        android:text="Gender:" />
+
+                    <Spinner
+                        android:id="@+id/genderSpinner"
+                        style="@style/spinner_short"
+                        android:layout_below="@+id/genderLabel"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/gender"
+                        android:layout_toLeftOf="@+id/genderToggle"
+                        android:layout_toStartOf="@+id/genderToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/genderToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_below="@+id/genderLabel"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Relationship -->
+                <RelativeLayout
+                    android:id="@+id/relationshipLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/relationshipLabel"
+                        style="@style/label_small"
+                        android:text="Relationship status:" />
+
+                    <Spinner
+                        android:id="@+id/relationshipSpinner"
+                        style="@style/spinner_short"
+                        android:layout_below="@+id/relationshipLabel"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/relationship_status"
+                        android:layout_toLeftOf="@+id/relationshipToggle"
+                        android:layout_toStartOf="@+id/relationshipToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/relationshipToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/relationshipSpinner"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Religion -->
+                <RelativeLayout
+                    android:id="@+id/religionLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/religionLabel"
+                        style="@style/label_small"
+                        android:text="Religion:" />
+
+                    <EditText
+                        android:id="@+id/religion"
+                        style="@style/input_short"
+                        android:layout_below="@+id/religionLabel"
+                        android:layout_toLeftOf="@+id/religionToggle"
+                        android:layout_toStartOf="@+id/religionToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/religionToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/religion"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Political views -->
+                <RelativeLayout
+                    android:id="@+id/politicalLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/politicalLabel"
+                        style="@style/label_small"
+                        android:text="Political views:" />
+
+                    <EditText
+                        android:id="@+id/political"
+                        style="@style/input_short"
+                        android:layout_below="@+id/politicalLabel"
+                        android:layout_toLeftOf="@+id/politicalToggle"
+                        android:layout_toStartOf="@+id/politicalToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/politicalToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/political"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Birthplace -->
+                <RelativeLayout
+                    android:id="@+id/birthplaceLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/birthplaceLabel"
+                        style="@style/label_small"
+                        android:text="Birthplace:" />
+
+                    <EditText
+                        android:id="@+id/birthplace"
+                        style="@style/input_short"
+                        android:layout_below="@+id/birthplaceLabel"
+                        android:layout_toLeftOf="@+id/birthplaceToggle"
+                        android:layout_toStartOf="@+id/birthplaceToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/birthplaceToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/birthplace"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Current city -->
+                <RelativeLayout
+                    android:id="@+id/currentCityLayout"
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/currentCityLabel"
+                        style="@style/label_small"
+                        android:text="Current city:" />
+
+                    <EditText
+                        android:id="@+id/currentCity"
+                        style="@style/input_short"
+                        android:layout_below="@+id/currentCityLabel"
+                        android:layout_toLeftOf="@+id/currentCityToggle"
+                        android:layout_toStartOf="@+id/currentCityToggle" />
+
+                    <ToggleButton
+                        android:id="@+id/currentCityToggle"
+                        style="@style/button_toggle_2"
+                        android:layout_alignTop="@+id/cellPhone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <!-- Submit button -->
+                <RelativeLayout
+                    style="@style/form_sub_section"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/button_submit"
+                        style="@style/button_form"
+                        android:text="Submit"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="saveInfo"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#80000000"
+        android:clickable="false"
+        android:onClick="overlayClick"
+        android:transitionGroup="false">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="false" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/left_drawer"
+        android:name="com.thenewboston.navigation.NavigationDrawer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
